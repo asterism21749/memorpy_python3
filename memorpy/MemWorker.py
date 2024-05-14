@@ -195,7 +195,7 @@ class MemWorker(object):
                 try:
                     b += self.process.read_bytes(current_offset, chunk_size)
                 except IOError as e:
-                    print traceback.format_exc()
+                    print(traceback.format_exc())
                     if e.errno == 13:
                         raise
                     else:

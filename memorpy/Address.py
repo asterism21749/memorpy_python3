@@ -58,7 +58,7 @@ class Address(object):
 
     def dump(self, ftype = 'bytes', size = 512, before = 32):
         buf = self.process.read_bytes(self.value - before, size)
-        print utils.hex_dump(buf, self.value - before, ftype=ftype)
+        print(utils.hex_dump(buf, self.value - before, ftype=ftype))
 
     def __nonzero__(self):
         return self.value is not None and self.value != 0
